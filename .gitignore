@@ -1,0 +1,6 @@
+invoice-creator-client/node_modules
+invoice-creator-server/__pycache__
+invoice-creator-server/.idea
+invoice-creator-server/.venv
+invoice-creator-server/invoice_creator.db
+invoice-creator-server/.env
