@@ -4,3 +4,5 @@ invoice-creator-server/.idea
 invoice-creator-server/.venv
 invoice-creator-server/invoice_creator.db
 invoice-creator-server/.env
+invoice_creator-server/build
+invoice_creator-server/templates/__pycache__

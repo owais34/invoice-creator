@@ -4,7 +4,7 @@ from email.policy import default
 from sqlalchemy.orm import mapped_column
 
 from database.setup import db
-from templates.invoice import json_format_default_template
+from templates.invoice import json_format_default_template, json_format_custom_fields
 
 
 class Firm(db.Model):
@@ -25,6 +25,10 @@ class Firm(db.Model):
     bank_name = mapped_column(db.String(100), default="")
     branch_name = mapped_column(db.String(100), default="")
     thank_message = mapped_column(db.String(100), default="")
+    sgst = mapped_column(db.Numeric, default=0, nullable=False)
+    igst = mapped_column(db.Numeric, default=0, nullable=False)
+    cgst = mapped_column(db.Numeric, default=0, nullable=False)
+    custom_fields = mapped_column(db.LargeBinary, nullable=False, default=json_format_custom_fields.encode())
 
 
     def get_invoice_template(self) -> dict:

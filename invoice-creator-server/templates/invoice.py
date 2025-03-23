@@ -15,7 +15,9 @@ default_template = {
         {"field": "dispatchThrough", "description": "Dispatch Through", "type": "form", "formAttributes": {"type": "text"}},
         {"field": "lrNumberAndDate", "description": "LR No. & Date ", "type": "form", "formAttributes": {"type": "text"}},
         {"field": "termsOfPayment", "description": "Terms of payment", "type": "form", "formAttributes": {"type": "text"}},
-        {"field": "customerName", "description": "Customer Name", "type": "form", "formAttributes": {"type": "text"}}
+        {"field": "customerName", "description": "Customer Name", "type": "form", "formAttributes": {"type": "text"}},
+        {"field": "customerBill", "description": "Bill", "type": "form", "formAttributes": {"type": "text"}},
+        {"field": "shippingAddress", "description": "Shipping Address", "type": "form", "formAttributes": {"type": "text"}}
     ],
     "Table Details": [
         {"field": "serialNumber", "description": "Sr. No", "type": "form", "formAttributes": {"type": "text"}},
@@ -27,9 +29,10 @@ default_template = {
         {"field": "amount", "description": "Amount", "type": "form", "formAttributes": {"type": "number", "step": "0.01"}}
     ],
     "Table 2 Details": [
-        {"field": "sgst", "description": "SGST", "type": "form", "formAttributes": {"type": "number", "step": "0.01"}},
-        {"field": "igst", "description": "IGST", "type": "form", "formAttributes": {"type": "number", "step": "0.01"}},
-        {"field": "roundOff", "description": "R/U", "type": "form", "formAttributes": {"type": "number", "step": "0.01"}}
+        {"field": "sgst", "description": "SGST %", "type": "autofill", "formAttributes": {"type": "number", "step": "0.01"}},
+        {"field": "cgst", "description": "CGST %", "type": "autofill", "formAttributes": {"type": "number", "step": "0.01"}},
+        {"field": "roundOff", "description": "R/U", "type": "function", "formAttributes": {"type": "number", "step": "0.01"}},
+        {"field": "totalAmount", "description": "Total Amount", "type": "function", "formAttributes": {"type": "number", "step": "0.01"}}
     ],
     "Account Information": [
         {"field": "accountName", "description": "Account Name", "type": "autofill", "formAttributes": {"type": "text"}},
@@ -47,4 +50,7 @@ default_template = {
 
 
 json_format_default_template = json.dumps(default_template)
+
+custom_fields = {}
+json_format_custom_fields = json.dumps(custom_fields)
 

@@ -18,6 +18,7 @@ function AddFirm() {
   useEffect(() => {
     API.get("/firm/form")
     .then(resp => {
+      console.log(resp.data.data)
       setFormFields(resp.data.data)
     })
     .catch(err => {
@@ -84,9 +85,9 @@ function AddFirm() {
       
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         {
-          formFields.map((formField) => {
+          formFields.map((formField, index) => {
             return (
-              <div style={styles.formGroup}>
+              <div style={styles.formGroup} key={index}>
               <label>{formField["description"]}</label>
               <input
                 {...formField.formAttributes}

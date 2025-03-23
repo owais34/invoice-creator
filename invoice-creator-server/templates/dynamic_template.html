@@ -10,104 +10,82 @@
     <div class="card m-auto mt-2 p-2" style="width: 800px">
         <div class="row">
             <div class="col-6">
-                <img src="$companyLogo" alt="Company logo" height="40px" id="companyLogo"/>
-                <p class="m-0 h4" id="companyName">$companyName</p>
-                <p class="m-0" id="companyDescription">$companyDescription</p>
-                <p class="m-0" id><span style="font-weight: bold;">Mobile:</span>$companyPhone</p>
-                <p class="m-0"><span style="font-weight: bold;">Address:</span><br>$companyAddress</p>
-                <p class="m-0"><span style="font-weight: bold;">Email:</span>$companyEmail</p>
+                <img src="$companyLogo$" alt="" height="40px" id="companyLogo"/>
+                <p class="m-0 h4" id="companyName">$companyName$</p>
+                <p class="m-0" id="companyDescription">$companyDescription$</p>
+                <p class="m-0" id><span style="font-weight: bold;">Mobile:</span>$companyPhone$</p>
+                <p class="m-0"><span style="font-weight: bold;">Address:</span><br>$companyAddress$</p>
+                <p class="m-0"><span style="font-weight: bold;">Email:</span>$companyEmail$</p>
             </div>
             <div class="col-6">
-                <p class="m-0 mt-4"><span style="font-weight: bold;">GSTIN: $gstin</span></p>
-                <p class="m-0"><span style="font-weight: bold;">Invoice No: $invoice</span></p>
-                <p class="m-0"><span style="font-weight: bold;">Invoice Date: $invoiceDate</span></p>
-                <p class="m-0"><span style="font-weight: bold;">Buyer'S Ref No: $buyersRefNo</span></p>
-                <p class="m-0"><span style="font-weight: bold;">Dispatch Through: $dispatchThrough</span></p>
-                <p class="m-0"><span style="font-weight: bold;">LR No & Date: $lrNoAndDate</span></p>
-                <p class="m-0"><span style="font-weight: bold;">Terms Of Payment: $termsOfPayment</span></p>
+                <p class="m-0 mt-4"><span style="font-weight: bold;">GSTIN: </span>$gstin$</p>
+                <p class="m-0"><span style="font-weight: bold;">Invoice No: </span>$invoice$</p>
+                <p class="m-0"><span style="font-weight: bold;">Invoice Date: </span>$invoiceDate$</p>
+                <p class="m-0"><span style="font-weight: bold;">Buyer'S Ref No: </span>$buyersRefNo$</p>
+                <p class="m-0"><span style="font-weight: bold;">Dispatch Through: </span>$dispatchThrough$</p>
+                <p class="m-0"><span style="font-weight: bold;">LR No & Date: </span>$lrNoAndDate$</p>
+                <p class="m-0"><span style="font-weight: bold;">Terms Of Payment: </span>$termsOfPayment$</p>
             </div>
         </div>
         <hr>
         <div class="row mt-4">
             <div class="col-4">
                 <p class="m-0 h5 bg-secondary-subtle p-1">Customer Name</p>
-                <p class="m-0 fw-light">$customerName</p>
+                <p class="m-0">$customerName$</p>
             </div>
             <div class="col-4">
                 <p class="m-0 h5 bg-secondary-subtle p-1">Bill</p>
-                <p class="m-0"></p>
+                <p class="m-0">$bill$</p>
             </div>
             <div class="col-4">
                 <p class="m-0 h5 bg-secondary-subtle p-1">Shipping Address</p>
-                <p class="m-0"></p>
+                <p class="m-0">$shippingAddress$</p>
             </div>
         </div>
         <div class="row mt-3">
             <div class="col-12">
             <table class="table table-bordered">
-                <thead class="table-secondary">
-                <tr>
-                  <th scope="col" id="serialNumber">Sr. No</th>
-                  <th scope="col" id="size">SIZE</th>
-                  <th scope="col" id="description">DESCRIPTION</th>
-                  <th scope="col" id="quantity">QUANT</th>
-                  <th scope="col" id="unit">Unit</th>
-                  <th scope="col" id="hsnCode">HSN Code</th>
-                  <th scope="col" id="amount">Amount</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>A4</td>
-                  <td>JK PAPER 75 GSM</td>
-                  <td>181</td>
-                  <td>REAM</td>
-                  <td>456</td>
-                  <td>44441.96</td>
-                </tr>
-                </tbody>
+                $table1$
             </table>
             </div>
         </div>
         <div class="row align-items-end">
             <div class="col-6">
-                <p class="my-0 mx-2 h5">$accountName</p>
-                <p class="my-0 mx-2">A/C No: $accountNumber</p>
-                <p class="my-0 mx-2">IFSC Code: $ifscCode</p>
-                <p class="my-0 mx-2">$bankName</p>
-                <p class="my-0 mx-2">$branchName</p>
+                <p class="my-0 mx-2 h5">$accountName$</p>
+                <p class="my-0 mx-2">A/C No: $accountNumber$</p>
+                <p class="my-0 mx-2">IFSC Code: $ifscCode$</p>
+                <p class="my-0 mx-2">$bankName$</p>
+                <p class="my-0 mx-2">$branchName$</p>
             </div>
             <div class="col-6">
                 <table class="table table-bordered">
                     <tr>
-                        <td>SGST 6%</td>
-                        <td>$sgst</td>
+                        <td>SGST $sgst$%</td>
+                        <td>$sgstAmount$</td>
                     </tr>
                     <tr>
-                        <td>CGST 6%</td>
-                        <td>2666.52</td>
+                        <td>CGST $cgst$%</td>
+                        <td>$cgstAmount$</td>
                     </tr>
                     <tr>
                         <td>R/U</td>
-                        <td>0.01</td>
+                        <td>$roundOff$</td>
                     </tr>
                     <tr>
                         <td>Total Amount</td>
-                        <td>0.01</td>
+                        <td>$totalAmount$</td>
                     </tr>
-
                 </table>
-                <p class="fw-semibold">$amountInWords</p>
+                <p class="fw-semibold">$amountInWords$</p>
             </div>
         </div>
         <div class="row align-items-end">
             <div class="col-6">
-                <p class="fw-semibold text-primary h-5 mx-2">$thankMessage</p>
+                <p class="fw-semibold text-primary h-5 mx-2">$thankMessage$</p>
             </div>
             <div class="col-6">
                 <hr class="border border-1 border-dark opacity-100 my-2 mt-5">
-                <p class="text-center fw-semibold my-0">For $companyName</p>
+                <p class="text-center fw-semibold my-0">For $companyName$</p>
                 <p class="text-center fw-semibold my-0">(Signature)</p>
             </div>
         </div>
